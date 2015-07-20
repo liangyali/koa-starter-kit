@@ -1,0 +1,32 @@
+{
+  "apps": [
+    {
+      "name": "koa-starter-kit",
+      "script": "server.js",
+      "env": {
+        "COMMON_ENV_VAR": "true"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ],
+  "deploy": {
+    "production": {
+      "user": "node",
+      "host": "212.83.163.1",
+      "repo": "git@github.com:repo.git",
+      "ref": "origin/master",
+      "path": "/var/www/production",
+      "post-deploy": "pm2 startOrRestart deploy.json --env production"
+    },
+    "dev": {
+      "user": "node",
+      "host": "212.83.163.1",
+      "repo": "git@github.com:repo.git",
+      "ref": "origin/master",
+      "path": "/var/www/development",
+      "post-deploy": "pm2 startOrRestart deploy.json --env production"
+    }
+  }
+}
