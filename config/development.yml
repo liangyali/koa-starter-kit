@@ -1,0 +1,7 @@
+#devlopment config
+db:
+  username: {username}
+  password: {Password}
+  database: {database}
+  host: {Host}
+  port: 3306
