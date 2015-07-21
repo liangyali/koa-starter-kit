@@ -7,18 +7,20 @@ let controllers = requireDir('./controllers');
 
 export default ()=> {
 
-    var router = new Router({
-        prefix: ''
-    });
+  var router = new Router({
+    prefix: ''
+  });
 
-    /**
-     * home routes
-     */
-    router.get('/', controllers.home.get);
+  /**
+   * home routes
+   */
+  router.get('/', controllers.home.get);
 
-    /**
-     * other routes
-     */
+  router.get('/authenticate', controllers.user.authenticate);
 
-    return router;
+  /**
+   * other routes
+   */
+
+  return router;
 };

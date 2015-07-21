@@ -8,6 +8,7 @@
     "babel": "^5.6.23",
     "config": "^1.14.0",
     "js-yaml": "^3.3.1",
+    "jsonwebtoken": "^5.0.4",
     "koa": "^0.21.0",
     "koa-bodyparser": "^2.0.0",
     "koa-compress": "^1.0.8",
