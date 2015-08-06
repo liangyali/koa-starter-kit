@@ -16,8 +16,6 @@ export default ()=> {
    */
   router.get('/', controllers.home.get);
 
-  router.get('/authenticate', controllers.user.authenticate);
-
   /**
    * other routes
    */
